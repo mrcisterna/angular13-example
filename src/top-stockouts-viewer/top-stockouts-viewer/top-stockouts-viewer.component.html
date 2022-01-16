@@ -1,0 +1,10 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3" *ngFor="let item of sortBy('salesRanking'); let i=index">
+            
+        </div>
+    </div>
+</div>
+<div *ngIf="data.length===0" class="alert alert-danger">
+    No items to show
+</div>
