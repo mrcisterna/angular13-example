@@ -1,10 +1,11 @@
 <div class="card">
-    <div class="position-relative" [ngClass]="{'opacity-50':isHover, 'opacity-100':!isHover}" (mouseenter)="onMouseEnter()"
-        (mouseleave)="onMouseLeave()" [ngClass]="{'opacity-25':isHover}">
+    <div class="position-relative" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
         <button type="button" class="btn btn-secondary btn-sm position-absolute top-50 start-50 translate-middle"
-            (click)="markComplete()">Mark Complete</button>
-        <app-stockout-card-image [fileName]="imageFileName()" [title]="item.name" [index]="index + 1">
-        </app-stockout-card-image>
+            (click)="markComplete()" [ngClass]="{'opacity-75':isHover, 'opacity-100':!isHover}">Mark Complete</button>
+        <div [ngClass]="{'opacity-50':isHover, 'opacity-100':!isHover}">
+            <app-stockout-card-image [fileName]="imageFileName()" [title]="item.name" [index]="index + 1">
+            </app-stockout-card-image>
+        </div>
     </div>
     <div class="card-body">
         <app-stockout-card-detail [code]="item.code" [name]="item.name" [price]="item.price"></app-stockout-card-detail>
