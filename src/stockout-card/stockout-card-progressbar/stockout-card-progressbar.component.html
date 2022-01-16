@@ -1,0 +1,7 @@
+<div>
+    <h2 class="d-inline me-2 text-muted">{{calculateStockoutPercentaje()}}%</h2>
+    <small class="text-muted">STOCKOUT</small>
+</div>
+<div class="progress">
+    <div class="progress-bar" role="progressbar" [style.width.%]="calculateStockoutPercentaje()"></div>
+</div>

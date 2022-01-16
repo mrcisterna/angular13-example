@@ -12,4 +12,7 @@
     <div class="card-body">
         <app-stockout-card-chart [data]="item.sizeStock"></app-stockout-card-chart>
     </div>
+    <div class="card-body border-top border-bottom">
+        <app-stockout-card-progressbar [stockoutRate]="item.stockoutRate"></app-stockout-card-progressbar>
+    </div>
 </div>

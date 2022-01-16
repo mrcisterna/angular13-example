@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { StockoutItemModel } from '../../shared/types/stockout-item-model';
 
 import { StockoutViewerCardComponent } from './stockout-viewer-card.component';
 
@@ -16,6 +17,9 @@ describe('StockoutViewerCardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(StockoutViewerCardComponent);
     component = fixture.componentInstance;
+    component.item = new StockoutItemModel();
+    component.item.code = 74566;
+
     fixture.detectChanges();
   });
 

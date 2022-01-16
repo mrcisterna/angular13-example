@@ -1,5 +1,7 @@
+import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { TopStockoutsViewerDataLoaderService } from '../services/top-stockouts-viewer-data-loader.service';
+import { TopStockoutsViewerComponent } from '../top-stockouts-viewer/top-stockouts-viewer/top-stockouts-viewer.component';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -7,6 +9,9 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [
         AppComponent
+      ],
+      imports: [
+        HttpClientModule
       ],
       providers: [
         TopStockoutsViewerDataLoaderService
@@ -20,16 +25,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'nextail-exercise-app'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('nextail-exercise-app');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('nextail-exercise-app app is running!');
+  it('should render app-top-stockouts-viewer', () => {
+    const fixture = TestBed.createComponent(TopStockoutsViewerComponent);
+    const stockoutsViewerComponent = fixture.componentInstance;
+    expect(stockoutsViewerComponent).toBeTruthy();
   });
 });

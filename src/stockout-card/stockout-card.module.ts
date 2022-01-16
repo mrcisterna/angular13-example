@@ -4,6 +4,7 @@ import { StockoutViewerCardComponent } from './stockout-viewer-card/stockout-vie
 import { StockoutCardImageComponent } from './stockout-card-image/stockout-card-image.component';
 import { StockoutCardDetailComponent } from './stockout-card-detail/stockout-card-detail.component';
 import { StockoutCardChartComponent } from './stockout-card-chart/stockout-card-chart.component';
+import { StockoutCardProgressbarComponent } from './stockout-card-progressbar/stockout-card-progressbar.component';
 import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
@@ -11,7 +12,8 @@ import { NgChartsModule } from 'ng2-charts';
     StockoutViewerCardComponent,
     StockoutCardImageComponent,
     StockoutCardDetailComponent,
-    StockoutCardChartComponent
+    StockoutCardChartComponent,
+    StockoutCardProgressbarComponent
   ],
   imports: [
     CommonModule,
