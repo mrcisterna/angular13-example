@@ -7,7 +7,7 @@ import { StockoutItemModel } from '../shared/types/stockout-item-model';
 @Injectable()
 export class TopStockoutsViewerDataLoaderService {
 
-  private dataSource = '../../data/products.json';
+  private dataSource = '../data/products.json';
 
   constructor(private http: HttpClient) { }
 

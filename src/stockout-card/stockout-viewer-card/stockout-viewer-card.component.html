@@ -6,4 +6,7 @@
         <app-stockout-card-image [fileName]="imageFileName()" [title]="item.name" [index]="index + 1">
         </app-stockout-card-image>
     </div>
+    <div class="card-body">
+        <app-stockout-card-detail [code]="item.code" [name]="item.name" [price]="item.price"></app-stockout-card-detail>
+    </div>
 </div>
