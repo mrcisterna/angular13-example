@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="position-relative" [ngClass]="{'opacity-50':isHover, 'opacity-100':!isHover}" (mouseenter)="onMouseEnter()"
+        (mouseleave)="onMouseLeave()" [ngClass]="{'opacity-25':isHover}">
+        <button type="button" class="btn btn-secondary btn-sm position-absolute top-50 start-50 translate-middle"
+            (click)="markComplete()">Mark Complete</button>
+        <app-stockout-card-image [fileName]="imageFileName()" [title]="item.name" [index]="index + 1">
+        </app-stockout-card-image>
+    </div>
+</div>

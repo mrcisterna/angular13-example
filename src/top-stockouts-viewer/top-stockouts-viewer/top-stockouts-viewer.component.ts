@@ -10,7 +10,13 @@ export class TopStockoutsViewerComponent {
 
   @Input() data: StockoutItemModel[] = [];
   
+  markedStockItemIndex: number;
+
   sortBy(prop: string): StockoutItemModel[] {
     return this.data.sort((a: any, b: any) => a[prop] > b[prop] ? 1 : a[prop] === b[prop] ? 0 : -1);
+  }
+
+  onMarkedComplete(markedStockItemIndex: number): void {
+    this.markedStockItemIndex = markedStockItemIndex;
   }
 }

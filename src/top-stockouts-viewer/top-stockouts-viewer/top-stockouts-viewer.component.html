@@ -1,7 +1,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-3" *ngFor="let item of sortBy('salesRanking'); let i=index">
-            
+            <app-stockout-viewer-card [item]="item" [index]="i" (markedComplete)="onMarkedComplete($event)">
+            </app-stockout-viewer-card>
         </div>
     </div>
 </div>
