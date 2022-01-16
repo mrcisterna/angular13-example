@@ -9,4 +9,7 @@
     <div class="card-body">
         <app-stockout-card-detail [code]="item.code" [name]="item.name" [price]="item.price"></app-stockout-card-detail>
     </div>
+    <div class="card-body">
+        <app-stockout-card-chart [data]="item.sizeStock"></app-stockout-card-chart>
+    </div>
 </div>

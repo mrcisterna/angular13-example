@@ -1,0 +1,5 @@
+<div class="chart-wrapper" *ngIf="showChart">
+    <canvas baseChart [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions" [legend]="chartLegend"
+        [type]="chartType" [plugins]="chartPlugins">
+    </canvas>
+</div>
