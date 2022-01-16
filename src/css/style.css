@@ -13,3 +13,20 @@ body {
 }
 
 /* Your CSS goes here */
+
+app-root > .card > .card-header{
+  color: #ffffff;
+  background-color: #ff6262;
+}
+
+.progress-bar{
+  background-color: #a5dc6b !important;
+}
+
+small{
+  font-size: 0.725em !important;    
+}
+
+.modal{
+  display: block !important;
+}

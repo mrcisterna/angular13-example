@@ -9,7 +9,10 @@ import { StockoutItemModel } from '../../shared/types/stockout-item-model';
 export class TopStockoutsViewerComponent {
 
   @Input() data: StockoutItemModel[] = [];
-  
+
+  modalTitle: string = 'Please confirm';
+  modalMessage: string = 'Are you sure you want to mark this product as complete?';
+  showModal: boolean;
   markedStockItemIndex: number;
 
   sortBy(prop: string): StockoutItemModel[] {
@@ -18,5 +21,19 @@ export class TopStockoutsViewerComponent {
 
   onMarkedComplete(markedStockItemIndex: number): void {
     this.markedStockItemIndex = markedStockItemIndex;
+    this.showModal = true;
+  }
+
+  onCancel(): void {
+    this.showModal = false;
+  }
+
+  onAccept(): void {
+    this.showModal = false;
+    this.removeStockoutItem();
+  }
+
+  private removeStockoutItem(): void {
+    this.data.splice(this.markedStockItemIndex, 1);
   }
 }

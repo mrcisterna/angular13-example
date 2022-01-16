@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TopStockoutsViewerComponent } from './top-stockouts-viewer/top-stockouts-viewer.component';
 import { StockoutCardModule } from '../stockout-card/stockout-card.module';
+import { ConfirmationModalModule } from '../confirmation-modal/confirmation-modal.module';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { StockoutCardModule } from '../stockout-card/stockout-card.module';
   ],
   imports: [
     CommonModule,
-    StockoutCardModule
+    StockoutCardModule,
+    ConfirmationModalModule
   ],
   exports: [
     TopStockoutsViewerComponent

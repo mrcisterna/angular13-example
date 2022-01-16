@@ -9,3 +9,5 @@
 <div *ngIf="data.length===0" class="alert alert-danger">
     No items to show
 </div>
+<app-simple-confirmation-modal *ngIf="showModal" [title]="modalTitle" [message]="modalMessage" (accept)="onAccept()"
+    (cancel)="onCancel()"></app-simple-confirmation-modal>
