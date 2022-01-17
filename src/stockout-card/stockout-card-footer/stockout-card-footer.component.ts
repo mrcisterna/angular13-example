@@ -1,19 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-stockout-card-footer',
   templateUrl: './stockout-card-footer.component.html',
   styleUrls: ['./stockout-card-footer.component.css']
 })
-export class StockoutCardFooterComponent implements OnInit {
+export class StockoutCardFooterComponent {
 
   @Input() whCoverage: number;
 
   ratio: number = 100;
   veryLowLimit: number = 50;
-
-  ngOnInit(): void {
-  }
 
   getWHCoverageStatus(): string {
     if (this.isBelowVeryLowLimit()) {

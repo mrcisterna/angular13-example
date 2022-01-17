@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-stockout-card-image',
@@ -6,7 +6,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./stockout-card-image.component.css']
 })
 export class StockoutCardImageComponent {
-
   @Input() fileName: string;
   @Input() title: string;
   @Input() index: number;
